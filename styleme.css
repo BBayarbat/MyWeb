@@ -1,0 +1,16 @@
+h1 {
+  color: green;
+}
+strong {
+  color: yellow;
+}
+h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+div span {
+  font-weight: bold;
+}
+.desc {
+  background-color: lightblue;
+  text-align: center;
+}
