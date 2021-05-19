@@ -1,16 +1,33 @@
 h1 {
-  color: green;
+  color: aqua;
+}
+body {
+  background-color: dimgray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 strong {
   color: yellow;
 }
 h3 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Times New Roman", Times, serif;
 }
 div span {
   font-weight: bold;
 }
+p span {
+  font-size: +2;
+}
 .desc {
   background-color: lightblue;
   text-align: center;
+}
+/* unvisited link */
+a {
+  text-decoration: none;
+}
+dt {
+  color: yellow;
+}
+dl {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
