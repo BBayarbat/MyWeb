@@ -1,0 +1,34 @@
+h1 {
+  color: #a4a400;
+  background-color: #f0f0f0;
+  text-align: left;
+  text-decoration-line: underline;
+  font-family: Lucida Sans Unicode, Helvetica, Arial;
+  font-size: 22p;
+  font-weight: bold;
+}
+body {
+  background-image: url("images/silverware.jpg");
+  color: #404040;
+  font-size: 11pt;
+  font-family: Georgia, Garamond;
+}
+
+a:link {
+  color: #a4a400;
+}
+
+span h1 {
+  text-align: center;
+}
+ol li span {
+  font-weight: bold;
+}
+
+blockquote {
+  background-color: yellow;
+}
+
+a {
+  color: #a4a400;
+}
