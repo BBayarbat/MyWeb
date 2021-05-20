@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <link href="signup.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>New User Sign Up:</legend>
+            <div class="lbl">
+                <label for="name">Name:</label>
+            </div>
+            <div>
+                <input name="name" id="name" type="text" maxlength="16" />
+            </div>
+            <div class="lbl">
+                <label for="gender">Gender</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="male" value="male" /><label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female" checked /><label
+                    for="female">Female</label>
+            </div>
+            <div class="lbl">
+                <label for="age">Age:</label>
+            </div>
+            <div>
+                <input name="age" id="age" type="text" size="6" maxlength="2" />
+            </div>
+            <div class="lbl">
+                <label for="personalityType">Personality Type:</label>
+            </div>
+            <div>
+                <input name="personalityType" id="personalityType" size="6" maxlength="4" type="text" />
+                (<a href="http://www.humanmetrics.com/cgiwin/JTypes2.asp">Don't know your type?</a>)
+            </div>
+            <div class="lbl">
+                <label for="favOS">Favorite OS:</label>
+            </div>
+            <div>
+                <select name="favOS" id="favOS">
+                    <option value="Win" selected>Windows</option>
+                    <option value="Mac">Mac OS X</option>
+                    <option value="Lin">Linux</option>
+                </select>
+            </div>
+            <div class="lbl">
+                <label for="seekingAge">Seeking Age:</label>
+            </div>
+            <div>
+                <input name="seekingAgeMin" id="seekingAgeMin" size="6" maxlength="2" type="text" placeholder="min" />
+                to
+                <input name="seekingAgeMax" id="seekingAgeMax" size="6" maxlength="2" type="text" placeholder="max" />
+            </div>
+            <div>
+                <input type="submit" value="Sign Up">
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

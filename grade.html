@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Retrieve Grade</title>
+    <link type="text/css" rel="stylesheet" href="signup.css" />
+</head>
+
+<body>
+
+    <form action="http://mumstudents.org/params.php">
+        <fieldset>
+            <legend>Retrieve your grade</legend>
+            <div class="lbl">
+                <label for="name">Student name</label>
+            </div>
+            <div>
+                <input type="text" id="name" name="name" />
+            </div>
+            <div class="lbl">
+                <label for="name">Student ID</label>
+            </div>
+            <div>
+                <input type="text" id="id" name="id" />
+            </div>
+            <div class="lbl">
+                <label for="assignment">Assignment</label>
+            </div>
+            <div>
+                <select name="assignment" id="assignment">
+                    <option value="FPP" selected>Foundametal Programming Practice</option>
+                    <option value="MPP">Modern Programming Practice</option>
+                    <option value="ALG">Algorithm</option>
+                    <option value="WAP">Web Applicaiton Programming</option>
+                </select>
+            </div>
+            <div class="lbl">
+                <label for="entry">Entry</label>
+            </div>
+            <div>
+                <input type="radio" name="entry" id="feb" value="Feb" checked><label for="feb">Febuary</label>
+                <input type="radio" name="entry" id="may" value="May"><label for="may">May</label>
+                <input type="radio" name="entry" id="aug" value="Aug"><label for="aug">August</label>
+                <input type="radio" name="entry" id="nov" value="Nov"><label for="nov">November</label>
+            </div>
+            <div>
+                <input type="checkbox" name="noLie" id="noLie"><label for="noLie">I filled my information right</label>
+            </div>
+            <div>
+                <input type="checkbox" name="lookUp" id="lookUp"><label for="lookUp" aria-required="true">I really look
+                    up my own
+                    grade</label>
+            </div>
+            <div>
+                <input type="submit" value="Get grade" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
