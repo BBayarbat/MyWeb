@@ -8,7 +8,7 @@ h1 {
   font-weight: bold;
 }
 body {
-  background-image: url("images/silverware.jpg");
+  background-image: url("../images/silverware.jpg");
   color: #404040;
   font-size: 11pt;
   font-family: Georgia, Garamond;

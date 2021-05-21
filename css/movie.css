@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/TMNT/background.png");
+  background-image: url("../images/TMNT/background.png");
   background-repeat: repeat;
   font-size: 8pt;
   font-family: Verdana, Tahoma, sans-serif;
@@ -8,7 +8,7 @@ body {
 }
 
 div.header {
-  background-image: url("images/TMNT/bannerbg.png");
+  background-image: url("../images/TMNT/bannerbg.png");
   background-repeat: repeat-x;
 
   align-items: center;
@@ -59,7 +59,7 @@ dd {
   margin-bottom: 10pt;
 }
 #rotten {
-  background-image: url("images/TMNT/rbg.png");
+  background-image: url("../images/TMNT/rbg.png");
   height: 83px;
   font-size: 48pt;
   color: red;
