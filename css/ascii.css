@@ -1,0 +1,29 @@
+body {
+  background-color: #ccccff;
+  font-size: 14pt;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 0 0 0 0;
+  text-align: center;
+}
+textarea {
+  width: 90%;
+  height: 400px;
+  font-size: 12pt;
+  font-family: monospace;
+}
+fieldset {
+  border-width: 5px;
+  border-color: black;
+}
+.column {
+  margin: auto;
+  column-count: 4;
+  column-fill: auto;
+  width: 50%;
+  overflow: hidden;
+  height: 100px;
+}
+.verif {
+  text-align: right;
+}

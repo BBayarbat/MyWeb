@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="ascii.js"></script>
+    <title>CS472: ASCII Animation Viewer</title>
+    <link href="css/ascii.css" type="text/css" rel="stylesheet" />
+    <script src="resources/animations.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>CS472: ASCII Animation Viewer</h1>
+    </div>
+    <div>
+        <textarea id="text" cols="80" rows="20"></textarea>
+    </div>
+    <div class="column">
+        <fieldset>
+            <legend>Play Controls:</legend>
+            <button id="start" name="start" onclick="btnStart();">Start</button>
+            <button id="stop" name="stop" onclick="btnStop();" disabled>Stop</button>
+        </fieldset>
+        <fieldset>
+            <legend>Animation:</legend>
+            <select id="animation" name="animation" onchange="onAnimChange();">
+                <option value="blank" selected>Blank</option>
+                <option value="exercise">Exercise</option>
+                <option value="juggler">Juggler</option>
+                <option value="bike">Bike</option>
+                <option value="dive">Dive</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Size:</legend>
+            <!--Tiny (7pt), Small (10pt), Medium (12pt), Large (16pt), Extra Large (24pt), XXL (32pt)-->
+
+            <select id="size" name="size" onchange="onFontChange();">
+                <option value="tiny">Tiny</option>
+                <option value="small">Small</option>
+                <option value="medium" selected>Medium</option>
+                <option value="large">Large</option>
+                <option value="xl">Extra Large</option>
+                <option value="xxl">XXL</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Speed:</legend>
+            <input type="checkbox" id="turbo" onchange="onSpeedChange();" />
+        </fieldset>
+    </div>
+    <div class="verif">
+        <a href="https://webster.cs.washington.edu/validate-html.php">
+            <img src="resources/images/w3c-html5.png" alt="Valid HTML" />
+        </a>
+        <a href="https://webster.cs.washington.edu/validate-css.php">
+            <img src="resources/images/w3c-css.png" alt="Valid CSS" />
+        </a>
+    </div>
+</body>
+
+</html>
