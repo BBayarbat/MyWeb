@@ -1,6 +1,11 @@
-var timer;
+var timer = null;
 function onClickTimer(){
-    timer = setInterval(bigger,500);    
+    if(timer == null)
+        timer = setInterval(bigger,500);    
+    else{
+        clearInterval(timer);
+        timer = null;
+    }
 }
 function bigger() {
     var txt = document.getElementById("text");
