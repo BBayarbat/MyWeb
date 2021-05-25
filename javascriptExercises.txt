@@ -1,0 +1,17 @@
+1. 
+setTimeout(booyah, 2000);    -- This statement 2 sec later call booyah var which has function
+setTimeout(booyah(), 2000);  -- This statement 2 sec later call booyah() function
+2. 
+6 ,6 x=6 y(2,3)=6
+
+3. 
+var booyah = function(){
+	alert("BOOYAH!");
+}
+function booyah2(){
+	alert("BOOYAH!");
+}
+4. What is "Unobtrusive Javascript"? What is the practical application of Unobtrusive Javascript (and the reasons
+for using it)?
+
+Unobtrusive JavaScript is the way of writing JavaScript language in which we properly separate Document Content and Script Content thus allowing us to make a clear distinction between them
