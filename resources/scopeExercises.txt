@@ -1,0 +1,56 @@
+Javascript Scope Exercises
+1. 
+	10
+	8
+	8
+	9
+	10
+	1
+
+2. 
+	A function can be called directly by its name. A method consists of a code that can be called by the name of its object and its method name using dot notation or square bracket notation
+3. class
+4. object
+5. class
+6. x
+7. Free variables are simply the variables that are neither locally declared nor passed as parameter.
+8. Create an object that has properties with name = "fred" and major="music" and a property that is a function
+	that takes 2 numbers and returns the smallest of the two, or the square of the two if they are equal.
+	var obj = {
+		name: "fred", 
+		major: "music",
+		func1: function(num1, num2) 
+				{ 
+				if(num1 === num2) 
+				return num2 * num2; 
+				else 
+				return num1 < num2 ? num1 : num2; 
+				}
+	}
+9. 
+	class Employee{
+		constructor(name, salary, position){
+			this.name = name;
+			this.salary = salary;
+			this.position = position;
+			
+		}
+		
+	}
+	let emp1 = new Employee("Bat", 120000, "Junior dev");
+	let emp2 = new Employee("Bataa", 220000, "Senior dev");
+	let emp3 = new Employee("Bayaraa", 320000, "Architecture");
+
+10. Write a Javascript function that takes any number of input arguments and returns the product of the
+arguments.
+function(param1, param2, ...moreParams){
+	var result = [param1, param2];
+	if(moreParams.length > 0)
+		for(var i=0;i<moreParams;i++){
+			result[i+2] = moreParams[i];
+		}
+	return result;
+}
+11. Write an arrow function that returns the maximum of its three input arguments.
+(a,b,c) => { if(a < b) a = b; if(c > a) return c; else return a;}
+
