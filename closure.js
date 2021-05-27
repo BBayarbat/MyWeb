@@ -1,18 +1,33 @@
-var accountInfoList = [];
-var modAccount =function (pAccountName, pBalance){
-    function addAccount(){
-        var account = {pAccountName: pBalance};
-        accountInfoList[accountInfoList.length] = account;
+
+var account = (function (){
+    let accountInfoList = [];
+    let addAccount = function (pAccountName, pBalance){
+        let bankAccount  ={"name": pAccountName, "balace": pBalance};
+        accountInfoList.push(bankAccount);
+        wlog();
     }
-    addAccount();
-};
+    let wlog = function(){
+        var log = "";
+        for(let i = 0 ; i<accountInfoList.length;i++){
+            let bankAccount = accountInfoList[i];
+            log +="Account name: " + bankAccount.name ;
+            log +="  Balance: " + bankAccount.balace 
+            log += "\n";
+        }
+
+        document.getElementById("log").innerHTML = log;
+    }
+    return {
+        addAccount: addAccount,
+        writeLog: wlog
+    }
+})();
 
 function createAccount(){
+    
     var pAccountName = document.getElementById("account").value;
     var pBalance = document.getElementById("amount").value;
-    modAccount(pAccountName, pBalance);
-
-    var log = document.getElementById("log").innerHTML;
-    log = log + "\n" + "Account name: " + pAccountName + "  Balance: " + pBalance;
-    document.getElementById("log").innerHTML = log;
+    var acnt = account;
+    
+    acnt.addAccount(pAccountName, pBalance);
 }
