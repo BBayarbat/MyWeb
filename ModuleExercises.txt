@@ -1,0 +1,232 @@
+Javascript Module Exercises
+1. Determine what this Javascript code will print out (without running it):
+
+undefined
+8
+8
+9
+10
+1
+
+2. Define Global Scope and Local Scope in Javascript.
+//global scope - Global variables are declared outside of a block
+var a = 40;
+//local scope - Local variables are declared inside of a block
+function a(){
+	var b = 6;
+}
+
+3. Consider the following structure of Javascript code:
+// Scope A
+function XFunc () {
+// Scope B
+function YFunc () {
+// Scope C
+};
+};
+(a) No
+(b) Yes
+(c) No
+(d) Yes
+(e) Yes
+
+4. What will be printed by the following (answer without running it)?
+
+81
+25
+
+5.  1 
+
+6. Consider the following definition of an add( ) function to increment a counter variable:
+
+var add = (function () {
+		var counter = 0;
+		var add = function () {
+			counter += 1;
+			};
+		var reset = function() {
+			counter = 0;
+			};
+			
+		return {
+			add:add,
+			reset:reset
+		}
+})();
+
+7. In the definition of add( ) shown in question 6, identify the "free" variable. In the context of a function closure,
+what is a "free" variable?
+
+counter is the free variable.
+
+8. The add( ) function defined in question 6 always adds 1 to the counter each time it is called. Write a definition
+of a function make_adder(inc), whose return value is an add function with increment value inc (instead of 1). Here
+
+var make_adder = function(inc){
+	counter += inc;
+}
+
+return {
+		add:add,
+		reset:reset,
+		make_adder:make_adder
+	}
+		
+9. Suppose you are given a file of Javascript code containing a list of many function and variable declarations. All of
+these function and variable names will be added to the Global Javascript namespace. What simple modification to
+the Javascript file can remove all the names from the Global namespace?
+
+- We can convert it to a module. Add first row "var module = (function() {" and add last row "})();"
+
+10. Using the Revealing Module Pattern, write a Javascript definition of a Module that creates an Employee Object
+with the following fields and methods:
+class Employee{
+	constructor(name, age, salary){
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+	var setAge = function(newAge){
+		this.age = newAge;
+	};
+	var setSalary = function(newSalary){
+		this.salary = salary
+	};
+	var setName = function(newName){
+		this.name = name;
+	};
+	let getAge = function(){
+		return this.age;
+	};
+	let getSalary = function(){
+		return this.salary;
+	};
+	let getName = function(){
+		return this.name;
+	};
+	var increaseSalary = function(percentage){
+		this.salary = this.salary + this.salary * percentage / 100;
+	};
+	var incrementAge = function(){
+		this.age = getAge() + 1;
+	};
+}
+11. Rewrite your answer to Question 10 using the Anonymous Object Literal Return Pattern.
+class Employee{
+	constructor(name, age, salary){
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+	let getAge = function(){
+		return this.age;
+	}
+	let getSalary = function(){
+		return this.salary;
+	}
+	let getName = function(){
+		return this.name;
+	}
+	return {
+			setAge: function(newAge){
+			this.age = newAge;
+		},
+			setSalary: function(newSalary){
+			this.salary = salary
+		},
+			setName: function(newName){
+			this.name = name;
+		},
+			increaseSalary: function(percentage){
+			this.salary = this.salary + this.salary * percentage / 100;
+		},
+			incrementAge:function(){
+			this.age = getAge() + 1;
+		}
+	}
+}
+12. Rewrite your answer to Question 10 using the Locally Scoped Object Literal Pattern.
+class Employee{
+	constructor(name, age, salary){
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+	let getAge = function(){
+		return this.age;
+	}
+	let getSalary = function(){
+		return this.salary;
+	}
+	let getName = function(){
+		return this.name;
+	}
+	let myObject =  {
+			setAge: function(newAge){
+			this.age = newAge;
+		},
+			setSalary: function(newSalary){
+			this.salary = salary
+		},
+			setName: function(newName){
+			this.name = name;
+		},
+			increaseSalary: function(percentage){
+			this.salary = this.salary + this.salary * percentage / 100;
+		},
+			incrementAge:function(){
+			this.age = getAge() + 1;
+		}
+	}
+	return myObject;
+}
+13. Write a few Javascript instructions to extend the Module of Question 10 to have a public address field and
+public methods setAddress(newAddress) and getAddress( ).
+class Employee{
+	constructor(name, age, salary, address){
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+		this.address = address;
+	}
+	var setAge = function(newAge){
+		this.age = newAge;
+	};
+	var setSalary = function(newSalary){
+		this.salary = salary
+	};
+	var setName = function(newName){
+		this.name = name;
+	};
+	let getAge = function(){
+		return this.age;
+	};
+	let getSalary = function(){
+		return this.salary;
+	};
+	let getName = function(){
+		return this.name;
+	};
+	let getAddress = function() {
+		return this.address;
+	}
+	let setAddress = function(newAddress){
+		this.address = newAddress;
+	}
+	var increaseSalary = function(percentage){
+		this.salary = this.salary + this.salary * percentage / 100;
+	};
+	var incrementAge = function(){
+		this.age = getAge() + 1;
+	};
+}
+
+14. Error: Hattori
+15. 
+
+Alert message "Success: Hattori"
+0.5 sec later Alert message "Error: Yoshi"
+
+16. 
+success
+error
