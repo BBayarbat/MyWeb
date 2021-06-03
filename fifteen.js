@@ -38,7 +38,7 @@ $(document).ready(function(){
 
     $("div.puzzlepiece").each(function(i){
         $(this).click(function(){
-            moveToAvailSlot(i+1);
+            moveToAvailSlot(i);
             markAvailSlot();
         });
         
@@ -98,14 +98,14 @@ function shuffle(array) {
   };
   function moveToAvailSlot(idx){
     var emptySlotIndex = garray[15];
-    let idxx = findPost(idx)-1;
+    let idxx = findPost(idx+1)-1;
     
     var puzzleArea = document.getElementById('puzzlearea');
     var divs = puzzleArea.getElementsByTagName("div");
 
     var x = (((emptySlotIndex-1) % 4) * 100) ;
     var y = (Math.floor((emptySlotIndex-1) / 4) * 100) ;
-    var div = divs[findPost(idx)-1];
+    var div = divs[idx];
     var tx = ((idx % 4) * 100) ;
     var ty = (Math.floor(idx / 4) * 100) ;
     // set basic style and background
@@ -115,6 +115,7 @@ function shuffle(array) {
     // store x and y for later
     div.x = x;
     div.y = y; 
+    idxx = findPost(emptySlotIndex);
     garray[15] = garray[idxx];
     garray[idxx] = emptySlotIndex;
   }

@@ -18,7 +18,7 @@ $(document).ready(function(){
 4.
 
 $(document).ready(function(){
-	$(".turkey").replaceWith("<li >Mashed Potatoes</li");
+	$(".turkey").replaceWith("<li>Mashed Potatoes</li>");
 });
 
 5.
