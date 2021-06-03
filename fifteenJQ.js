@@ -8,8 +8,10 @@ $(document).ready(function(){
     })
 
     $("div.puzzlepiece").each(function(i){
+
         $(this).click(function(){
-            moveToAvailSlot(i);
+            if($this.hasClass('movablepiece'))
+                moveToAvailSlot(i);
         });        
     });
 });
