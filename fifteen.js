@@ -129,7 +129,7 @@ function findPost(pvalue){
             divs.eq(a[13]-1).addClass("movablepiece");  
         break;
         case 9: 
-            divs.eq(a[5]-1).addClass("movablepiece"); 
+            divs.eq(a[4]-1).addClass("movablepiece"); 
             divs.eq(a[9]-1).addClass("movablepiece"); 
             divs.eq(a[12]-1).addClass("movablepiece"); 
         break;
