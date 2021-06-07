@@ -13,7 +13,7 @@ exports.getNextQuestion = function (req,res,vals) {
         questionId++;
         if(questionId >= strQuiz.length){
             res.writeHead(200, {'Content-Type': 'text/html'});       
-            res.write("<form action = 'http://localhost:8080/numberQuiz.js' method= 'get'>");
+            res.write("<form action = 'http://localhost:8080/numberQuiz.js' method= 'POST'>");
             res.write("<h1>The Number Quiz</h1>")
             res.write("<p>Your current score is <span name = 'score'>" + score + "</span>.</p>");
             res.write("<p>Your have completed the Number Quiz, with a score of <span name = 'score'>" + score + "</span> of 5</p>");           
@@ -23,7 +23,7 @@ exports.getNextQuestion = function (req,res,vals) {
     }
 
     res.writeHead(200, {'Content-Type': 'text/html'});       
-    res.write("<form action = 'http://localhost:8080/numberQuiz.js' method= 'get'>");
+    res.write("<form action = 'http://localhost:8080/numberQuiz.js' method= 'POST'>");
     res.write("<h1>The Number Quiz</h1>")
     res.write("<p>Your current score is <span>" + score + "</span>.</p>");
     res.write("<p>Guess the next number in the sequence. </p>");
