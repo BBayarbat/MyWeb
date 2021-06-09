@@ -13,8 +13,14 @@ var server = app.listen(8080,function(){
 app.get('/', cors(), function(req, res, next) {
     res.json('Hello World');
 });
-  
+
+app.get('/dictionary', cors(), function(req, res, next) {
+    var word = req.query.word;
+    wordMod.search(req, res, word);
+});
+
 app.post('/dictionary', cors(), function(req, res, next) {
     var word = req.body.word;
     wordMod.search(req, res, word);
 });
+

@@ -2,31 +2,30 @@
     <title>NerdLuv</title>
     <meta charset="utf-8" />
     <link href="resources/images/heart.gif" type="image/gif" rel="shortcut icon" />
-    <link href="resources/nerdluv.css" type="text/css" rel="stylesheet" />
+    <link href="css/signup.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-
-    <form action="matches-submit.html">
-        <fieldset>
-            <legend>Returning User:</legend>
-            <div class='row'>
-                <div class='col-sm-6'>
-                    <div class='form-group'>
-                        <label for="name">Name:</label>
-                    </div>
+    <header>
+        <img src="resources/images/nerdluv.png" alt="banner logo" /> <br />
+        where meek geeks meet
+    </header>
+    <div id="content">
+        <form action="http://localhost:8080/matches-submit.js" method="POST">
+            <fieldset>
+                <legend>Returning User:</legend>
+                <div class="lbl">
+                    <label for="name">Name:</label>
                 </div>
-                <div class='col-sm-6'>
-                    <div class='form-group'>
-                        <input name="name" id="name" type="text" maxlength="16" />
-                    </div>
+                <div>
+                    <input name="name" type="text" maxlength="16" required />
                 </div>
-            </div>
-            <div>
-                <input type="submit" value="View My Matches">
-            </div>
-        </fieldset>
-    </form>
+                <div>
+                    <input type="submit" value="View My Matches">
+                </div>
+            </fieldset>
+        </form>
+    </div>
 </body>
 
 </html>

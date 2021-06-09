@@ -1,0 +1,4 @@
+Bayarbat,M,35,ISTJ,Win,20,40
+Solongo,F,28,ISTJ,Win,28,36
+Narangerel,F,32,ISTJ,Win,28,36
+Munkhzul,F,35,ISTJ,Win,28,40
