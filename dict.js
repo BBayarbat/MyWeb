@@ -8,7 +8,7 @@ $(document).ready(function() {
         $.ajax({
             headers: { "Accept": "application/json"},
             url: "http://localhost:8080/dictionary",
-            type: "GET",
+            type: "POST",
             data: {"word":word},
             beforeSend: function(xhr){
                 xhr.withCredentials = true;
