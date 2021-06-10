@@ -32,26 +32,36 @@ app.post('/', cors(), function(req, res, next) {
 
  function transactions(req,res, acntBody) {
     var strQuery = "SELECT * FROM accounts WHERE 1=1";
-    console.log(acntBody.user + " " + acntBody.account + " " + acntBody.amount + " " + acntBody.operation);
-   /* <option>deposit</option>
-                    <option>withdraw</option>
-                    <option>balance</option>
-                    <option>new</option>
-                    */
     if(acntBody.operation === 'new'){
         strQuery = "insert into accounts(name, number, balance) values('" + acntBody.user+ "'," + acntBody.account+ "," + acntBody.amount+ ")";
-        con.query(strQuery);
-        res.end();
+        con.query(strQuery, function(err){
+            if (err) {
+                res.send('Creating account failed'); 
+            }  
+            
+            res.send('Creating account successful'); 
+        });
     } 
     if(acntBody.operation === 'deposit'){
         strQuery = "update accounts set balance = balance + " + acntBody.amount + " where number = " + acntBody.account;
-        con.query(strQuery);
-        res.send('Deposit');
+        con.query(strQuery, function(err){
+            if (err) {
+                res.send('Deposit failed'); 
+            }  
+            
+            res.send('Deposit successful'); 
+        });
+        
     }                   
     if(acntBody.operation === 'withdraw'){
         strQuery = "update accounts set balance = balance - " + acntBody.amount + " where number = " + acntBody.account;
-        con.query(strQuery);
-        res.send('Deposit');
+        con.query(strQuery, function(err){
+            if (err) {
+                res.send('Withdraw failed'); 
+            }  
+            
+            res.send('Withdraw successful'); 
+        });
     }            
     if(acntBody.operation === 'balance'){
         strQuery = "SELECT balance FROM accounts where number = " + acntBody.account;
@@ -59,9 +69,8 @@ app.post('/', cors(), function(req, res, next) {
             if (err) {
                 return console.error('error: ' + err.message);
             }  
-            
-            res.send("<p>The Current Balance is $" + result[0].balance + " </p>");  
+            res.send("<script>alert('The Current Balance is $ " +result[0].balance+ "');</script>");
+            //res.send("<p>The Current Balance is $" + result[0].balance + " </p>");  
         });
    }            
-   console.log(strQuery);
 };
